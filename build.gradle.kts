@@ -39,3 +39,6 @@ tasks.withType<AbstractTestTask>().configureEach {
         exceptionFormat = TestExceptionFormat.FULL
     }
 }
+
+println("PATH is:")
+println(System.getenv("PATH"))
