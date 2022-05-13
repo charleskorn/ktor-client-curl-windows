@@ -40,6 +40,9 @@ jobs:
           install: mingw-w64-x86_64-curl
         if: runner.os == 'Windows'
 
+      - name: Add MSYS2 bin to PATH
+        run: echo "C:\msys64\mingw64\bin" >> $GITHUB_PATH
+
       - name: Examine PATH
         run: echo "$PATH"
 
