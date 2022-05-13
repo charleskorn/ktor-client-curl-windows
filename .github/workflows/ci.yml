@@ -9,15 +9,8 @@ defaults:
 
 jobs:
   build-and-test:
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - name: Windows
-            runner: windows-2019
-
-    name: "Build and test (${{ matrix.name }})"
-    runs-on: ${{ matrix.runner }}
+    name: "Build and test (Windows)"
+    runs-on: windows-2019
     steps:
       - name: Check out code
         uses: actions/checkout@v3.0.2
