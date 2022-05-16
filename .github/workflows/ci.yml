@@ -40,14 +40,17 @@ jobs:
       - name: Check C:\msys64\mingw64\lib
         run: ls C:\msys64\mingw64\lib
         shell: pwsh
+        if: always()
 
       - name: Check C:\Tools\msys64\mingw64\lib
         run: ls C:\Tools\msys64\mingw64\lib
         shell: pwsh
+        if: always()
 
       - name: Check C:\Tools\msys2\mingw64\lib
         run: ls C:\Tools\msys2\mingw64\lib
         shell: pwsh
+        if: always()
 
       - name: Build and test
         run: ./gradlew check
