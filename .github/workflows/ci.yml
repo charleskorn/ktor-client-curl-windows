@@ -37,6 +37,18 @@ jobs:
         run: ls C:\msys64\mingw64\bin\
         shell: pwsh
 
+      - name: Check C:\msys64\mingw64\lib
+        run: ls C:\msys64\mingw64\lib
+        shell: pwsh
+
+      - name: Check C:\Tools\msys64\mingw64\lib
+        run: ls C:\Tools\msys64\mingw64\lib
+        shell: pwsh
+
+      - name: Check C:\Tools\msys2\mingw64\lib
+        run: ls C:\Tools\msys2\mingw64\lib
+        shell: pwsh
+
       - name: Build and test
         run: ./gradlew check
         env:
